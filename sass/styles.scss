@@ -1,0 +1,66 @@
+@import "variables";
+@import "mixins";
+@import "functions";
+
+body {
+    height: 100vh;
+    width: 100vw;
+    @include zeroborderbox;
+}
+
+#container {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    @include zeroborderbox;
+    @include containerflex;
+    @include horizontalflex;
+
+    > aside {
+        padding: 8px;
+        padding-top: 56px;
+
+        ul {
+            list-style: none;
+            color: $color_font;
+            @include zeroborderbox;
+            @include containerflex;
+            @include verticalflex;
+            gap: doubleSize(8px);
+
+            li {
+                @include stylesMenu;
+                gap: 8px;
+            }
+        }
+    }
+
+    > section {
+        flex-grow: 2;
+
+        > div:nth-child(1) {
+            @include containerflex;
+            @include horizontalflex;
+
+            > div:nth-child(1) {
+                > img {
+                    width: 250px;
+                    height: 250px;
+                    border-radius: 50%;
+                }
+            }
+
+            > div:nth-child(2) {
+                flex-grow: 2;
+            }
+        }
+        > div:nth-child(2) {
+            background-color: yellow;
+            height: 25px;
+        }
+        > div:nth-child(3) {
+            background-color: brown;
+            height: 25px;
+        }
+    }
+}

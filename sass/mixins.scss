@@ -1,0 +1,23 @@
+@mixin zeroborderbox {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+@mixin containerflex {
+    display: flex;
+}
+
+@mixin horizontalflex {
+    flex-direction: row;
+}
+
+@mixin verticalflex {
+    flex-direction: column;
+}
+
+@mixin stylesMenu {
+    font-size: 32px;
+    @include containerflex;
+    @include horizontalflex;
+}

@@ -1,0 +1,3 @@
+@function doubleSize($size) {
+    @return calc($size*2);
+}
